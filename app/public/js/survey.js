@@ -16,6 +16,11 @@ $(function() {
             diffArray.push(totalDiff)
         }
         console.log(diffArray);
+        let smallDiffIndex = diffArray.indexOf(Math.min(...diffArray));
+        const finalMatch = result[smallDiffIndex];
+        console.log(smallDiffIndex);
+        $("#match-name").text(finalMatch.name);
+        $("#match-img").attr(src, finalMatch.photo)
     })
   };
     const captureInput = function(e) {
